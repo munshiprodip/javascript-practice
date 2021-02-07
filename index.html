@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<script>
+
+    const phoneBook ={
+        phone: [{
+            name:"Someone else",
+            mobile1:"01700000001", 
+            mobile2:"", 
+            mobile3:"01700000003", 
+            mobile4:"", 
+            mobile5:"01700000005"
+        }]
+    } 
+
+    const person = phoneBook.phone[0]       // get value of phoneBook object phone proparty 0 index
+
+
+    //print the value of mobile1-mobile5 dynamically
+    for (let i = 1; i <=5; i++) {
+
+        let mobile = 'mobile' + i           // Generate dynamic proparty mobile1-mobile5
+        if (person[mobile]) {               // Validation -- Working
+                
+            console.log(person.name)         // Print value of static proparty -- Working
+            console.log(person.mobile)         // Print value of dynamic proparty using (.) --not Working
+            console.log(person[mobile])         // Print value of dynamic proparty using ([])--Working
+            
+        }
+    }
+    // Please explain why unable to access value using dynamic proparty with (.) --undefined
+
+</script>
+
+</body>
+</html> 
+
